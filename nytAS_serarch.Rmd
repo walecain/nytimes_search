@@ -29,4 +29,8 @@ options(nytimes_as_key = '')
 Keep your key somewhere safe. **Do not post to internet** like a public gitub repository, Wale´!
 ## Send the Query
 All of the set up should be done.  Now I, can search the NYTimes.  
-Now we can search the time period interested.  I am interested in looking at two periods the *Brady Handgun Violence Prevention Act* lookin at February 28, 1994 - Present and the period after the expiery of the "Federal Assualt Weapons Ban*( a part f the VViolent Crime Control and Law Enforcement Act of 1994); which was in enforcement from 1994-2004.
+Now we can search the time period interested.  I am interested in looking at two periods the *Brady Handgun Violence Prevention Act* looking at February 28, 1994 - Present and the period after the expiery of the "Federal Assualt Weapons Ban*( a part f the VViolent Crime Control and Law Enforcement Act of 1994); which was in enforcement from 1994-2004.
+```{r}
+dates <- format(seq(as.Date("1994/1/1"), as.Date("2016/11/28"), by = "1 month"),"%Y%M%D")
+```
+
