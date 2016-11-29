@@ -1,0 +1,32 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+# What and Why
+This is a trial use of the NYTimes search API.  In this particular case I want to do a frequency search of the term "Active Shooter" in light of the recent incident at Ohio State University (28 November 2016).  This expirement is modeled off of the [*Use case - Civi Rights Covereage in the NYT overtime*](https://cran.r-project.org/web/packages/rtimes/vignettes/nyt_civil_rights.html).
+
+# Getting Started
+## Installing Packages
+```{r}
+install.packages ("devtools")
+devtools::install_github("ropengov/rtimes")
+```
+## call on the library
+```{r}
+library("rtimes")
+```
+
+### alternatives:
+you could also use "require.packages" to similair effect
+
+## Authentication
+In order to make the api call you will need to authenticate yourself.  In order to do that you will need to register for an API key.  This is easy to do.  Go to the [developer sign up page](http://developer.nytimes.com/signup) at the NYTimes and enter the required information.  For this excercise I am using the Article Search API, selected from the dropdown menu.
+
+When you get your key, you have to set it for R:
+```{r}
+options(nytimes_as_key = '')
+```
+Keep your key somewhere safe. **Do not post to internet** like a public gitub repository, Wale´!
+## Send the Query
+All of the set up should be done.  Now I, can search the NYTimes.  
+Now we can search the time period interested.  I am interested in looking at two periods the *Brady Handgun Violence Prevention Act* lookin at February 28, 1994 - Present and the period after the expiery of the "Federal Assualt Weapons Ban*( a part f the VViolent Crime Control and Law Enforcement Act of 1994); which was in enforcement from 1994-2004.
